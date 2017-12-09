@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/loader.css">
+    <title>Loader</title>
+</head>
+<body>
+<header>
+    <div  id="one" class="loader none">
+        <div class="center">
+            <img src="./img/loading.gif" style="width: 100px;height: 100px">
+        </div>
+    </div>
+</header>
+
+<script>
+    $(".header").animate({width:"10%"},100);
+</script>
+
+<section class="body">
+    <div id="two" class="loader none">
+        <div class="center rotate">
+            <img src="./img/loading.png" style="width: 100px;height: 100px">
+        </div>
+    </div>
+</section>
+
+
+<section class="body">
+    <div id="three" class="loader none">
+        <div class="center">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+</section>
+<script>
+    $(".header").animate({width:"30%"},100);
+</script>
+
+<section class="banner">
+    <div id="four" class="loader none">
+        <div class="center ">
+        </div>
+    </div>
+</section>
+
+<script>
+    $(".header").animate({width:"70%"},100);
+</script>
+
+<section class="foot">
+    <div id="five" class="loader">
+        <div class="header">
+        </div>
+    </div>
+</section>
+
+<script>
+    $(".header").animate({width:"80%"},100);
+</script>
+
+<section class="foot">
+    <div style="position: absolute;top:30%;left: 38%">
+        <button onclick="showGif()">gif加载</button>
+        <button onclick="showPic()">pic加载</button>
+        <button onclick="showCSS3()">纯css3加载</button>
+        <button onclick="showHerder()">头部加载</button>
+    </div>
+</section>
+
+<script>
+    $(".header").animate({width:"100%"},100,function(){
+        $(".loader").fadeOut();
+    });
+</script>
+
+
+<script>
+    function showGif(){
+        $("#one").fadeIn();
+        setTimeout(function(){
+            $("#one").fadeOut();
+                },3000)
+    }
+    function showPic(){
+        $("#two").fadeIn();
+        setTimeout(function(){
+            $("#two").fadeOut();
+        },3000)
+    }
+    function showCSS3(){
+        $("#three").fadeIn();
+        setTimeout(function(){
+            $("#three").fadeOut();
+        },3000)
+    }
+    function showrRealTime(){
+        $("#three").fadeIn();
+        setTimeout(function(){
+            $("#three").fadeOut();
+        },3000)
+    }
+    function showHerder(){
+      location.reload();
+    }
+</script>
+</body>
+</html>
